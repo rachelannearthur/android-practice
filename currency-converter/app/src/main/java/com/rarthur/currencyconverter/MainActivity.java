@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
         Double amountInPounds = amount * 0.76;
 
-        Toast.makeText(MainActivity.this, String.format("%.2f", amountInPounds), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"Pounds: " + String.format("%.2f", amountInPounds), Toast.LENGTH_SHORT).show();
     }
 }
