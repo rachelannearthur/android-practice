@@ -2,9 +2,9 @@ package com.rarthur.currencyconverter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
     public void convert(View v) {
         EditText amountEditText = findViewById(R.id.editText);
 
-        Log.d("Curreny Converter: ", amountEditText.getText().toString());
-
         Double amount = Double.parseDouble(amountEditText.getText().toString());
 
-        Log.d("currency converter: ", amount.toString());
+        Double amountInPounds = amount * 0.76;
+
+        Toast.makeText(MainActivity.this, String.format("%.2f", amountInPounds), Toast.LENGTH_SHORT).show();
     }
 }
